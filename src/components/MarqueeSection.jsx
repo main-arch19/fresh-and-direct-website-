@@ -3,7 +3,6 @@ import imgIrishPotato from '../assets/irish-potato.jpeg';
 import imgYellowYam from '../assets/yellow-yam.jpeg';
 import imgBellPeppers from '../assets/bell-peppers.jpeg';
 import imgCabbage from '../assets/cabbage.jpeg';
-import imgCarrots from '../assets/carrots.jpeg';
 
 const produceTiles = [
   { name: 'Irish Potato', hue: 60, c: 0.10, img: imgIrishPotato },
@@ -17,7 +16,7 @@ const produceTiles = [
   { name: 'Pineapple', hue: 95, c: 0.16 },
   { name: 'Mango', hue: 70, c: 0.18 },
   { name: 'Tomato', hue: 25, c: 0.18 },
-  { name: 'Carrot', hue: 45, c: 0.18, img: imgCarrots },
+  { name: 'Garlic 2', hue: 90, c: 0.05 },
   { name: 'Cabbage', hue: 130, c: 0.12, img: imgCabbage },
   { name: 'Sweet Potato', hue: 35, c: 0.14 },
   { name: 'Cassava', hue: 75, c: 0.06 },

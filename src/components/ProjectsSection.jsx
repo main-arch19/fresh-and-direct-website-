@@ -1,0 +1,153 @@
+import { useRef } from 'react';
+import { motion, useScroll, useTransform } from 'framer-motion';
+import FadeIn from './ui/FadeIn';
+import { GhostButton } from './ui/Buttons';
+
+const projects = [
+  {
+    n: '01',
+    cat: 'Flagship Investment',
+    name: 'New Pen, St. Mary',
+    summary: '$50M planted into Irish-potato cultivation — publicly commended by the Minister of Agriculture as a model for farmer returns.',
+    hue: 70,
+  },
+  {
+    n: '02',
+    cat: 'Digital Division',
+    name: 'Fresh Mart Express',
+    summary: 'Online produce marketplace delivering 46+ items across Kingston, St Andrew and Portmore — downtown prices without the downtown experience.',
+    hue: 35,
+  },
+  {
+    n: '03',
+    cat: 'International Trade',
+    name: 'Holland Supply Partnership',
+    summary: 'A 10+ year supply relationship with major Dutch growers — anchoring imported produce alongside our growing local catalog.',
+    hue: 200,
+  },
+];
+
+function ProjectImage({ label, hue, style }) {
+  return (
+    <div
+      className="w-full overflow-hidden flex items-end p-5"
+      style={{
+        background: `radial-gradient(circle at 40% 30%, oklch(0.72 0.14 ${hue}), oklch(0.34 0.08 ${hue}) 80%)`,
+        borderRadius: 'clamp(28px, 4vw, 48px)',
+        border: '1px solid rgba(14,42,18,0.1)',
+        ...style,
+      }}
+    >
+      <span className="font-mono text-[11px] uppercase tracking-widest" style={{ color: '#FFFFFFcc' }}>
+        {label}
+      </span>
+    </div>
+  );
+}
+
+function ProjectCard({ project, index, total }) {
+  const cardRef = useRef(null);
+  const { scrollYProgress } = useScroll({ target: cardRef, offset: ['start end', 'start start'] });
+  const targetScale = 1 - (total - 1 - index) * 0.03;
+  const scale = useTransform(scrollYProgress, [0, 1], [1, targetScale]);
+
+  return (
+    <div ref={cardRef} className="h-[85vh] flex items-start sticky" style={{ top: 0 }}>
+      <motion.div
+        style={{
+          scale,
+          top: `${index * 28}px`,
+          position: 'sticky',
+          background: '#FFFFFF',
+          border: '2px solid #0E2A12',
+          borderRadius: 'clamp(40px, 5vw, 60px)',
+          boxShadow: '0 20px 50px -25px rgba(14,42,18,0.25)',
+          width: '100%',
+        }}
+        className="p-4 sm:p-6 md:p-8 flex flex-col gap-4 md:gap-6"
+      >
+        <div className="flex items-center justify-between gap-4 flex-wrap">
+          <div className="flex items-center gap-4 sm:gap-6 md:gap-10">
+            <div
+              className="font-black"
+              style={{ color: '#0E2A12', fontSize: 'clamp(3rem, 9vw, 130px)', lineHeight: 0.9 }}
+            >
+              {project.n}
+            </div>
+            <div className="flex flex-col gap-2 max-w-md">
+              <span
+                className="uppercase tracking-widest font-light"
+                style={{ color: '#C99A2E', fontSize: 'clamp(0.7rem, 1vw, 0.9rem)' }}
+              >
+                {project.cat}
+              </span>
+              <span
+                className="uppercase font-medium"
+                style={{ color: '#0E2A12', fontSize: 'clamp(1rem, 2vw, 1.8rem)', lineHeight: 1 }}
+              >
+                {project.name}
+              </span>
+              <span
+                className="font-light leading-snug mt-1 hidden md:block"
+                style={{ color: '#4B5A48', fontSize: 'clamp(0.85rem, 1vw, 1rem)' }}
+              >
+                {project.summary}
+              </span>
+            </div>
+          </div>
+          <GhostButton label="Read Story" />
+        </div>
+        <div className="grid grid-cols-5 gap-3 md:gap-5">
+          <div className="col-span-2 flex flex-col gap-3 md:gap-5">
+            <ProjectImage
+              label={`[ ${project.name} — shot 1 ]`}
+              hue={project.hue}
+              style={{ height: 'clamp(130px, 16vw, 230px)' }}
+            />
+            <ProjectImage
+              label={`[ ${project.name} — shot 2 ]`}
+              hue={project.hue + 20}
+              style={{ height: 'clamp(160px, 22vw, 340px)' }}
+            />
+          </div>
+          <div className="col-span-3">
+            <ProjectImage
+              label={`[ ${project.name} — hero ]`}
+              hue={project.hue + 40}
+              style={{ height: '100%', minHeight: 'clamp(300px, 40vw, 590px)' }}
+            />
+          </div>
+        </div>
+      </motion.div>
+    </div>
+  );
+}
+
+export default function ProjectsSection() {
+  return (
+    <section id="projects" className="relative z-10 pb-24" style={{ background: '#FFFFFF' }}>
+      <div className="overflow-hidden pt-16 sm:pt-20 md:pt-28">
+        <FadeIn
+          className="text-center uppercase tracking-[0.4em] font-light mb-6"
+          y={20}
+          style={{ color: '#C99A2E', fontSize: 'clamp(0.7rem, 1vw, 0.95rem)' }}
+        >
+          Featured Work
+        </FadeIn>
+        <FadeIn
+          as="h2"
+          y={40}
+          className="heading-dark font-black uppercase tracking-tight leading-none text-center"
+          style={{ fontSize: 'clamp(64px, 16vw, 16vw)' }}
+        >
+          Projects
+        </FadeIn>
+      </div>
+      <div className="px-5 sm:px-8 md:px-10 mt-12 md:mt-20">
+        {projects.map((p, i) => (
+          <ProjectCard key={p.n} project={p} index={i} total={projects.length} />
+        ))}
+      </div>
+    </section>
+  );
+}

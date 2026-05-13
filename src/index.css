@@ -1,0 +1,52 @@
+@import "tailwindcss";
+
+:root {
+  --bg: #FFFFFF;
+  --bg-alt: #F2EFE4;
+  --ink: #0E2A12;
+  --ink-soft: #4B5A48;
+  --line: rgba(14, 42, 18, 0.14);
+  --green: #2F8F2F;
+  --green-deep: #1A5A1A;
+  --gold: #C99A2E;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body, #root {
+  background: var(--bg);
+  font-family: 'Kanit', sans-serif;
+  color: var(--ink);
+}
+
+body {
+  overflow-x: clip;
+}
+
+.hero-heading {
+  background: linear-gradient(180deg, #FFFFFF 0%, #F2C94C 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  filter: drop-shadow(0 2px 12px rgba(0,0,0,0.4));
+}
+
+.heading-dark {
+  background: linear-gradient(180deg, #0E2A12 0%, #2F8F2F 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+.contact-btn {
+  background: linear-gradient(123deg, #0E2A12 7%, #1A5A1A 37%, #2F8F2F 72%, #C99A2E 100%);
+  box-shadow: 0px 6px 18px rgba(31, 122, 31, 0.28), 4px 4px 12px #2F8F2F inset;
+  outline: 2px solid #FFFFFF;
+  outline-offset: -3px;
+}

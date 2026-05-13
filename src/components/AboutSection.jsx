@@ -1,18 +1,25 @@
 import FadeIn from './ui/FadeIn';
 import AnimatedText from './ui/AnimatedText';
 import { ContactButton } from './ui/Buttons';
+import imgFarming from '../assets/farming.jpeg';
+import imgIrishPotatoHarvest from '../assets/irish-potato-harvest.jpeg';
 
-function CornerPlaceholder({ className, label, ...rest }) {
+function CornerPlaceholder({ className, label, img, ...rest }) {
   return (
     <FadeIn className={`absolute ${className}`} {...rest}>
       <div
-        className="w-full aspect-square rounded-2xl flex items-center justify-center text-center px-2"
-        style={{
+        className="w-full aspect-square rounded-2xl flex items-end justify-start p-2"
+        style={img ? {
+          backgroundImage: `linear-gradient(to top, rgba(0,0,0,0.55) 0%, transparent 50%), url(${img})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          border: '1px solid rgba(14,42,18,0.1)',
+        } : {
           background: 'repeating-linear-gradient(135deg, #EDE9D8 0 14px, #F4F1E4 14px 28px)',
           border: '1px solid rgba(14,42,18,0.1)',
         }}
       >
-        <span className="font-mono text-[10px] sm:text-xs" style={{ color: '#7A8A6A' }}>{label}</span>
+        <span className="font-mono text-[10px] sm:text-xs" style={{ color: img ? '#FFFFFFcc' : '#7A8A6A' }}>{label}</span>
       </div>
     </FadeIn>
   );
@@ -30,6 +37,7 @@ export default function AboutSection() {
           label="[ farmer at work ]"
           className="top-[4%] left-[1%] sm:left-[2%] md:left-[4%] w-[120px] sm:w-[160px] md:w-[210px]"
           delay={0.1} x={-80} y={0} duration={0.9}
+          img={imgFarming}
         />
         <CornerPlaceholder
           label="[ market crates ]"
@@ -40,6 +48,7 @@ export default function AboutSection() {
           label="[ Irish potato harvest ]"
           className="top-[4%] right-[1%] sm:right-[2%] md:right-[4%] w-[120px] sm:w-[160px] md:w-[210px]"
           delay={0.15} x={80} y={0} duration={0.9}
+          img={imgIrishPotatoHarvest}
         />
         <CornerPlaceholder
           label="[ delivery van ]"

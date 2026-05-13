@@ -17,7 +17,7 @@ const produceTiles = [
   { name: 'Mango', hue: 70, c: 0.18 },
   { name: 'Tomato', hue: 25, c: 0.18 },
   { name: 'Garlic 2', hue: 90, c: 0.05, img: imgGarlic2 },
-  { name: 'Grape Tomatoes', hue: 10, c: 0.20 },
+  { name: 'Grape', hue: 10, c: 0.20 },
   { name: 'Sweet Potato', hue: 35, c: 0.14 },
   { name: 'Onions', hue: 80, c: 0.07 },
   { name: 'Green Banana', hue: 120, c: 0.12 },

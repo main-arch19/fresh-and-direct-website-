@@ -6,9 +6,12 @@ import imgGarlic2 from '../assets/garlic-2.jpeg';
 import imgGrapeTomatoes from '../assets/grape-tomatoes.jpeg';
 import imgScallion from '../assets/scallion.jpeg';
 import imgBeans from '../assets/beans.jpeg';
+import imgFarming from '../assets/farming.jpeg';
+import imgIrishPotatoHarvest from '../assets/irish-potato-harvest.jpeg';
 
 const produceTiles = [
   { name: 'Irish Potato', hue: 60, c: 0.10, img: imgIrishPotato },
+  { name: 'Irish Potato Harvest', hue: 60, c: 0.10, img: imgIrishPotatoHarvest },
   { name: 'Garlic 1', hue: 90, c: 0.05, img: imgGarlic1 },
   { name: 'Sweet Pepper', hue: 25, c: 0.18, img: imgBellPeppers },
   { name: 'Scallion', hue: 130, c: 0.14, img: imgScallion },
@@ -20,6 +23,7 @@ const produceTiles = [
   { name: 'Mango', hue: 70, c: 0.18 },
   { name: 'Tomato', hue: 25, c: 0.18 },
   { name: 'Garlic 2', hue: 90, c: 0.05, img: imgGarlic2 },
+  { name: 'Farmer at Work', hue: 80, c: 0.08, img: imgFarming },
   { name: 'Grape', hue: 10, c: 0.20, img: imgGrapeTomatoes },
   { name: 'Sweet Potato', hue: 35, c: 0.14 },
   { name: 'Onions', hue: 80, c: 0.07, img: imgBeans },

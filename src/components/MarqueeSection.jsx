@@ -1,7 +1,6 @@
 import { useRef, useEffect, useState } from 'react';
 import imgIrishPotato from '../assets/irish-potato.jpeg';
 import imgBellPeppers from '../assets/bell-peppers.jpeg';
-import imgCabbage from '../assets/cabbage.jpeg';
 import imgGarlic1 from '../assets/garlic-1.jpeg';
 import imgGarlic2 from '../assets/garlic-2.jpeg';
 
@@ -18,9 +17,9 @@ const produceTiles = [
   { name: 'Mango', hue: 70, c: 0.18 },
   { name: 'Tomato', hue: 25, c: 0.18 },
   { name: 'Garlic 2', hue: 90, c: 0.05, img: imgGarlic2 },
-  { name: 'Cabbage', hue: 130, c: 0.12, img: imgCabbage },
+  { name: 'Grape Tomatoes', hue: 10, c: 0.20 },
   { name: 'Sweet Potato', hue: 35, c: 0.14 },
-  { name: 'Cassava', hue: 75, c: 0.06 },
+  { name: 'Onions', hue: 80, c: 0.07 },
   { name: 'Green Banana', hue: 120, c: 0.12 },
   { name: 'Plantain', hue: 90, c: 0.14 },
   { name: 'Scallion', hue: 130, c: 0.14 },

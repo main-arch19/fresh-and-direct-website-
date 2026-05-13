@@ -1,9 +1,14 @@
 import { useRef, useEffect, useState } from 'react';
+import imgIrishPotato from '../assets/irish-potato.jpeg';
+import imgYellowYam from '../assets/yellow-yam.jpeg';
+import imgBellPeppers from '../assets/bell-peppers.jpeg';
+import imgCabbage from '../assets/cabbage.jpeg';
+import imgCarrots from '../assets/carrots.jpeg';
 
 const produceTiles = [
-  { name: 'Irish Potato', hue: 60, c: 0.10 },
-  { name: 'Yellow Yam', hue: 70, c: 0.12 },
-  { name: 'Sweet Pepper', hue: 25, c: 0.18 },
+  { name: 'Irish Potato', hue: 60, c: 0.10, img: imgIrishPotato },
+  { name: 'Yellow Yam', hue: 70, c: 0.12, img: imgYellowYam },
+  { name: 'Sweet Pepper', hue: 25, c: 0.18, img: imgBellPeppers },
   { name: 'Callaloo', hue: 145, c: 0.16 },
   { name: 'Scotch Bonnet', hue: 30, c: 0.20 },
   { name: 'Pumpkin', hue: 50, c: 0.18 },
@@ -12,8 +17,8 @@ const produceTiles = [
   { name: 'Pineapple', hue: 95, c: 0.16 },
   { name: 'Mango', hue: 70, c: 0.18 },
   { name: 'Tomato', hue: 25, c: 0.18 },
-  { name: 'Carrot', hue: 45, c: 0.18 },
-  { name: 'Cabbage', hue: 130, c: 0.12 },
+  { name: 'Carrot', hue: 45, c: 0.18, img: imgCarrots },
+  { name: 'Cabbage', hue: 130, c: 0.12, img: imgCabbage },
   { name: 'Sweet Potato', hue: 35, c: 0.14 },
   { name: 'Cassava', hue: 75, c: 0.06 },
   { name: 'Green Banana', hue: 120, c: 0.12 },
@@ -25,14 +30,24 @@ const produceTiles = [
 ];
 
 function Tile({ t }) {
+  const bgStyle = t.img
+    ? {
+        backgroundImage: `linear-gradient(to top, rgba(0,0,0,0.60) 0%, transparent 55%), url(${t.img})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+      }
+    : {
+        background: `radial-gradient(circle at 35% 35%, oklch(0.72 ${t.c} ${t.hue}), oklch(0.35 ${t.c * 0.7} ${t.hue}) 80%)`,
+      };
+
   return (
     <div
       className="rounded-2xl flex flex-col items-start justify-end shrink-0 overflow-hidden p-5"
       style={{
         width: 420,
         height: 270,
-        background: `radial-gradient(circle at 35% 35%, oklch(0.72 ${t.c} ${t.hue}), oklch(0.35 ${t.c * 0.7} ${t.hue}) 80%)`,
         border: '1px solid rgba(14,42,18,0.1)',
+        ...bgStyle,
       }}
     >
       <span className="font-mono text-[11px] uppercase tracking-widest" style={{ color: '#FFFFFFcc' }}>

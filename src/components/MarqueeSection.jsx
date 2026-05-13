@@ -8,7 +8,7 @@ const produceTiles = [
   { name: 'Irish Potato', hue: 60, c: 0.10, img: imgIrishPotato },
   { name: 'Garlic 1', hue: 90, c: 0.05, img: imgGarlic1 },
   { name: 'Sweet Pepper', hue: 25, c: 0.18, img: imgBellPeppers },
-  { name: 'Callaloo', hue: 145, c: 0.16 },
+  { name: 'Scallion', hue: 130, c: 0.14 },
   { name: 'Scotch Bonnet', hue: 30, c: 0.20 },
   { name: 'Pumpkin', hue: 50, c: 0.18 },
   { name: 'Onion', hue: 80, c: 0.07 },

@@ -1,12 +1,11 @@
 import { useRef, useEffect, useState } from 'react';
 import imgIrishPotato from '../assets/irish-potato.jpeg';
-import imgYellowYam from '../assets/yellow-yam.jpeg';
 import imgBellPeppers from '../assets/bell-peppers.jpeg';
 import imgCabbage from '../assets/cabbage.jpeg';
 
 const produceTiles = [
   { name: 'Irish Potato', hue: 60, c: 0.10, img: imgIrishPotato },
-  { name: 'Yellow Yam', hue: 70, c: 0.12, img: imgYellowYam },
+  { name: 'Garlic 1', hue: 90, c: 0.05 },
   { name: 'Sweet Pepper', hue: 25, c: 0.18, img: imgBellPeppers },
   { name: 'Callaloo', hue: 145, c: 0.16 },
   { name: 'Scotch Bonnet', hue: 30, c: 0.20 },

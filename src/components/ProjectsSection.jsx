@@ -2,6 +2,9 @@ import { useRef } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import FadeIn from './ui/FadeIn';
 import { GhostButton } from './ui/Buttons';
+import stMaryShot1 from '../assets/st-mary-shot-1.jpeg';
+import stMaryShot2 from '../assets/st-mary-shot-2.jpeg';
+import stMaryHero from '../assets/st-mary-hero.jpeg';
 
 const projects = [
   {
@@ -10,6 +13,7 @@ const projects = [
     name: 'New Pen, St. Mary',
     summary: '$50M planted into Irish-potato cultivation — publicly commended by the Minister of Agriculture as a model for farmer returns.',
     hue: 70,
+    imgs: [stMaryShot1, stMaryShot2, stMaryHero],
   },
   {
     n: '02',
@@ -27,18 +31,26 @@ const projects = [
   },
 ];
 
-function ProjectImage({ label, hue, style }) {
+function ProjectImage({ label, hue, src, style }) {
   return (
     <div
-      className="w-full overflow-hidden flex items-end p-5"
+      className="w-full overflow-hidden flex items-end p-5 relative"
       style={{
-        background: `radial-gradient(circle at 40% 30%, oklch(0.72 0.14 ${hue}), oklch(0.34 0.08 ${hue}) 80%)`,
+        background: src ? '#000' : `radial-gradient(circle at 40% 30%, oklch(0.72 0.14 ${hue}), oklch(0.34 0.08 ${hue}) 80%)`,
         borderRadius: 'clamp(28px, 4vw, 48px)',
         border: '1px solid rgba(14,42,18,0.1)',
         ...style,
       }}
     >
-      <span className="font-mono text-[11px] uppercase tracking-widest" style={{ color: '#FFFFFFcc' }}>
+      {src && (
+        <img
+          src={src}
+          alt={label}
+          className="absolute inset-0 w-full h-full object-cover"
+          style={{ borderRadius: 'inherit' }}
+        />
+      )}
+      <span className="relative font-mono text-[11px] uppercase tracking-widest z-10" style={{ color: '#FFFFFFcc' }}>
         {label}
       </span>
     </div>
@@ -102,11 +114,13 @@ function ProjectCard({ project, index, total }) {
             <ProjectImage
               label={`[ ${project.name} — shot 1 ]`}
               hue={project.hue}
+              src={project.imgs?.[0]}
               style={{ height: 'clamp(130px, 16vw, 230px)' }}
             />
             <ProjectImage
               label={`[ ${project.name} — shot 2 ]`}
               hue={project.hue + 20}
+              src={project.imgs?.[1]}
               style={{ height: 'clamp(160px, 22vw, 340px)' }}
             />
           </div>
@@ -114,6 +128,7 @@ function ProjectCard({ project, index, total }) {
             <ProjectImage
               label={`[ ${project.name} — hero ]`}
               hue={project.hue + 40}
+              src={project.imgs?.[2]}
               style={{ height: '100%', minHeight: 'clamp(300px, 40vw, 590px)' }}
             />
           </div>

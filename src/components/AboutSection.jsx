@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import FadeIn from './ui/FadeIn';
 import AnimatedText from './ui/AnimatedText';
 import { ContactButton } from './ui/Buttons';
@@ -90,7 +91,9 @@ export default function AboutSection() {
           animate={{ y: [0, -10, 0] }}
           transition={{ duration: 1.4, repeat: Infinity, ease: 'easeInOut' }}
         >
-          <ContactButton label="Experience the Seed to Shelf Journey" large />
+          <Link to="/journey" style={{ textDecoration: 'none' }}>
+            <ContactButton label="Experience the Seed to Shelf Journey" large />
+          </Link>
         </motion.div>
       </FadeIn>
     </section>

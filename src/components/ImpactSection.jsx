@@ -1,11 +1,31 @@
+import { useRef, useEffect, useState } from 'react';
+import { useInView, animate } from 'framer-motion';
 import FadeIn from './ui/FadeIn';
 
 const impactStats = [
-  { n: '$50M', label: 'Invested in a major Irish-potato project in New Pen, St. Mary (2021)' },
-  { n: '20+', label: 'Years in the produce business since 2005' },
-  { n: '40+', label: 'Contracted farmers supplying Fresh & Direct year-round' },
-  { n: '46+', label: 'Fresh items available on Fresh Mart Express, and growing' },
+  { prefix: '$', to: 50, suffix: 'M', label: 'Invested in a major Irish-potato project in New Pen, St. Mary (2021)' },
+  { prefix: '',  to: 20, suffix: '+', label: 'Years in the produce business since 2005' },
+  { prefix: '',  to: 40, suffix: '+', label: 'Contracted farmers supplying Fresh & Direct year-round' },
+  { prefix: '',  to: 46, suffix: '+', label: 'Fresh items available on Fresh Mart Express, and growing' },
 ];
+
+function CountUp({ to, prefix = '', suffix = '', duration = 1.5 }) {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, margin: '0px 0px -50px 0px' });
+  const [val, setVal] = useState(0);
+
+  useEffect(() => {
+    if (!isInView) return;
+    const controls = animate(0, to, {
+      duration,
+      ease: 'easeOut',
+      onUpdate(v) { setVal(Math.round(v)); },
+    });
+    return controls.stop;
+  }, [isInView, to, duration]);
+
+  return <span ref={ref}>{prefix}{val}{suffix}</span>;
+}
 
 export default function ImpactSection() {
   return (
@@ -32,7 +52,7 @@ export default function ImpactSection() {
       >
         {impactStats.map((s, i) => (
           <FadeIn
-            key={s.n}
+            key={s.to + s.suffix}
             delay={i * 0.08}
             className="flex flex-col gap-4 p-6 md:p-10"
             style={{ background: '#FFFFFF', minHeight: 220 }}
@@ -41,7 +61,7 @@ export default function ImpactSection() {
               className="font-black"
               style={{ color: '#0E2A12', fontSize: 'clamp(2.5rem, 5vw, 5rem)', lineHeight: 0.9 }}
             >
-              {s.n}
+              <CountUp prefix={s.prefix} to={s.to} suffix={s.suffix} />
             </div>
             <div
               className="font-light leading-snug"

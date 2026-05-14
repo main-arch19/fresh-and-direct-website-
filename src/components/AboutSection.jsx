@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion';
 import FadeIn from './ui/FadeIn';
 import AnimatedText from './ui/AnimatedText';
 import { ContactButton } from './ui/Buttons';
@@ -43,7 +44,7 @@ export default function AboutSection() {
         />
         <CornerPlaceholder
           label="[ market crates ]"
-          className="bottom-[8%] left-[3%] sm:left-[6%] md:left-[10%] w-[100px] sm:w-[140px] md:w-[180px]"
+          className="bottom-[1%] left-[3%] sm:left-[6%] md:left-[10%] w-[100px] sm:w-[140px] md:w-[180px]"
           delay={0.25} x={-80} y={0} duration={0.9}
           img={imgMarketCrates}
         />
@@ -55,7 +56,7 @@ export default function AboutSection() {
         />
         <CornerPlaceholder
           label="[ delivery van ]"
-          className="bottom-[8%] right-[3%] sm:right-[6%] md:right-[10%] w-[130px] sm:w-[170px] md:w-[220px]"
+          className="bottom-[1%] right-[3%] sm:right-[6%] md:right-[10%] w-[130px] sm:w-[170px] md:w-[220px]"
           delay={0.3} x={80} y={0} duration={0.9}
           img={imgDeliveryVan}
         />
@@ -85,7 +86,12 @@ export default function AboutSection() {
         />
       </div>
       <FadeIn className="relative z-10">
-        <ContactButton label="Get In Touch" large />
+        <motion.div
+          animate={{ y: [0, -10, 0] }}
+          transition={{ duration: 1.4, repeat: Infinity, ease: 'easeInOut' }}
+        >
+          <ContactButton label="Experience the Seed to Shelf Journey" large />
+        </motion.div>
       </FadeIn>
     </section>
   );

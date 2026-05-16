@@ -16,7 +16,7 @@ export default function HeroSection() {
         loop
         playsInline
         className="absolute inset-0 w-full h-full object-cover"
-        style={{ zIndex: 0, objectPosition: 'center' }}
+        style={{ zIndex: 0, objectPosition: 'center 75%' }}
         src={heroVideo}
       />
       {/* Overlay gradient */}

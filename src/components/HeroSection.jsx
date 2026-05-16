@@ -39,7 +39,7 @@ export default function HeroSection() {
               style={{ height: 'clamp(80px, 10vw, 130px)', width: 'auto', display: 'block', mixBlendMode: 'multiply' }}
             />
           </a>
-          <div className="hidden md:flex mr-20 lg:mr-48">
+          <div className="hidden md:flex mr-32 lg:mr-72">
             <NavTabs />
           </div>
           <a href="#contact" className="md:hidden hover:opacity-70 transition-opacity duration-200">Menu</a>

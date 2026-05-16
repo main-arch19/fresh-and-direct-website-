@@ -29,7 +29,7 @@ export default function HeroSection() {
       />
       <FadeIn delay={0} y={-20} className="relative" style={{ zIndex: 10 }}>
         <nav
-          className="flex justify-between items-center px-6 md:px-10 pt-6 md:pt-8 text-sm md:text-base lg:text-lg font-medium uppercase tracking-wider"
+          className="flex justify-between items-center px-8 md:px-14 pt-8 md:pt-12 text-sm md:text-base lg:text-lg font-medium uppercase tracking-wider"
           style={{ color: '#FFFFFF', textShadow: '0 1px 6px rgba(0,0,0,0.45)' }}
         >
           <a href="#" className="flex items-center shrink-0">

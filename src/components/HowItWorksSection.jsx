@@ -34,7 +34,6 @@ export default function HowItWorksSection() {
             style={{
               background: '#FFFFFF',
               borderRadius: 'clamp(28px, 3vw, 40px)',
-              minHeight: 280,
               border: '1px solid var(--line)',
             }}
           >
@@ -52,7 +51,7 @@ export default function HowItWorksSection() {
             </div>
             <div
               className="font-light leading-relaxed"
-              style={{ color: '#4B5A48', fontSize: 'clamp(0.85rem, 1vw, 1rem)' }}
+              style={{ color: '#4B5A48', fontSize: 'clamp(0.95rem, 1.1vw, 1.1rem)' }}
             >
               {s.desc}
             </div>

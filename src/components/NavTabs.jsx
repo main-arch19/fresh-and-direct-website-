@@ -26,10 +26,8 @@ export default function NavTabs() {
         role="tablist"
         className="relative flex items-center p-2 rounded-full min-w-max flex-shrink-0 overflow-hidden"
         style={{
-          background: 'rgba(255,255,255,0.15)',
-          backdropFilter: 'blur(12px)',
-          WebkitBackdropFilter: 'blur(12px)',
-          boxShadow: '0 2px 16px rgba(0,0,0,0.18), inset 0 1px 0 rgba(255,255,255,0.25)',
+          background: '#C99A2E',
+          boxShadow: '0 2px 16px rgba(0,0,0,0.22)',
         }}
       >
         {/* Glowing green streak */}
@@ -58,7 +56,7 @@ export default function NavTabs() {
             className="nav-tab-btn relative px-10 py-5 rounded-full text-2xl font-medium whitespace-nowrap cursor-pointer select-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-orange-400"
             style={{
               zIndex: 1,
-              color: activeIndex === i ? '#ffffff' : 'rgba(255,255,255,0.62)',
+              color: '#ffffff',
               background: 'none',
               border: 'none',
             }}

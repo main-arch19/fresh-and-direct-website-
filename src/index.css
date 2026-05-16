@@ -27,6 +27,14 @@ body {
   overflow-x: clip;
 }
 
+.nav-tab-btn {
+  transition: color 0.2s ease, text-shadow 0.2s ease;
+}
+.nav-tab-btn:hover {
+  color: #ffffff !important;
+  text-shadow: 0 0 8px rgba(255,140,0,0.95), 0 0 22px rgba(255,100,0,0.65), 0 0 40px rgba(255,80,0,0.35);
+}
+
 @keyframes nav-streak {
   0%   { left: -20%; opacity: 0; }
   8%   { opacity: 1; }

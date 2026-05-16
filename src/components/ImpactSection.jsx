@@ -81,7 +81,7 @@ export default function ImpactSection() {
           className="p-8 md:p-10 flex flex-col gap-5"
           style={{ border: '1px solid var(--line)', borderRadius: 'clamp(28px, 3vw, 40px)' }}
         >
-          <div className="uppercase tracking-widest font-light text-sm ml-2" style={{ color: '#C99A2E' }}>
+          <div className="uppercase tracking-widest font-light text-sm ml-8" style={{ color: '#C99A2E' }}>
             Jamaica Observer · Feb 2021
           </div>
           <p className="font-medium leading-snug" style={{ color: '#0E2A12', fontSize: 'clamp(1.1rem, 1.6vw, 1.5rem)' }}>

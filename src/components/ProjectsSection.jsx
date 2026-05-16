@@ -5,6 +5,9 @@ import { GhostButton } from './ui/Buttons';
 import stMaryShot1 from '../assets/st-mary-shot-1.jpeg';
 import stMaryShot2 from '../assets/st-mary-shot-2.jpeg';
 import stMaryHero from '../assets/st-mary-hero.jpeg';
+import freshExpressShot1 from '../assets/fresh-express-shot-1.jpeg';
+import freshExpressShot2 from '../assets/fresh-express-shot-2.jpeg';
+import freshExpressHero from '../assets/fresh-express-hero.jpeg';
 
 const projects = [
   {
@@ -22,6 +25,7 @@ const projects = [
     name: 'Fresh Mart Express',
     summary: 'Online produce marketplace delivering 46+ items across Kingston, St Andrew and Portmore — downtown prices without the downtown experience.',
     hue: 35,
+    imgs: [freshExpressShot1, freshExpressShot2, freshExpressHero],
     link: 'https://past.jamaica-gleaner.com/article/business/20150524/food-produce-market-now-available-online-fresh-mart-express',
   },
   {

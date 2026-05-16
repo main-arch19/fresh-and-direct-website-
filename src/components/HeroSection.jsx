@@ -1,5 +1,6 @@
 import FadeIn from './ui/FadeIn';
 import { ContactButton } from './ui/Buttons';
+import NavTabs from './NavTabs';
 import logoImg from '../assets/fresh-and-direct-logo.jpg';
 import heroVideo from '../assets/hero-video.mp4';
 
@@ -39,12 +40,8 @@ export default function HeroSection() {
               style={{ height: 'clamp(80px, 10vw, 130px)', width: 'auto', display: 'block', mixBlendMode: 'multiply' }}
             />
           </a>
-          <div className="hidden md:flex gap-10 lg:gap-14">
-            <a href="#about" className="hover:opacity-70 transition-opacity duration-200">About</a>
-            <a href="#services" className="hover:opacity-70 transition-opacity duration-200">What We Do</a>
-            <a href="#impact" className="hover:opacity-70 transition-opacity duration-200">Impact</a>
-            <a href="#projects" className="hover:opacity-70 transition-opacity duration-200">Projects</a>
-            <a href="#contact" className="hover:opacity-70 transition-opacity duration-200">Contact</a>
+          <div className="hidden md:flex">
+            <NavTabs />
           </div>
           <a href="#contact" className="md:hidden hover:opacity-70 transition-opacity duration-200">Menu</a>
         </nav>

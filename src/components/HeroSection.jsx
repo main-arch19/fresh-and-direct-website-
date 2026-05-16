@@ -36,7 +36,7 @@ export default function HeroSection() {
             <img
               src={logoImg}
               alt="Fresh & Direct — Food Service · Farming · Fruits & Vegetables"
-              style={{ height: 'clamp(80px, 10vw, 130px)', width: 'auto', display: 'block', mixBlendMode: 'multiply' }}
+              style={{ height: 'clamp(80px, 10vw, 130px)', width: 'clamp(80px, 10vw, 130px)', display: 'block', objectFit: 'cover', borderRadius: '50%' }}
             />
           </a>
           <div className="hidden md:flex mr-44 lg:mr-96">

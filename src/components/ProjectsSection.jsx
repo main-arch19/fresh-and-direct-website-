@@ -14,6 +14,7 @@ const projects = [
     summary: '$50M planted into Irish-potato cultivation — publicly commended by the Minister of Agriculture as a model for farmer returns.',
     hue: 70,
     imgs: [stMaryShot1, stMaryShot2, stMaryHero],
+    link: 'https://www.jamaicaobserver.com/2021/02/03/green-commends-fresh-direct-ltd-for-50-million-investment-in-agriculture/',
   },
   {
     n: '02',
@@ -21,6 +22,7 @@ const projects = [
     name: 'Fresh Mart Express',
     summary: 'Online produce marketplace delivering 46+ items across Kingston, St Andrew and Portmore — downtown prices without the downtown experience.',
     hue: 35,
+    link: 'https://past.jamaica-gleaner.com/article/business/20150524/food-produce-market-now-available-online-fresh-mart-express',
   },
   {
     n: '03',
@@ -107,9 +109,11 @@ function ProjectCard({ project, index, total }) {
               </span>
             </div>
           </div>
-          <a href="https://www.jamaicaobserver.com/2021/02/03/green-commends-fresh-direct-ltd-for-50-million-investment-in-agriculture/" target="_blank" rel="noopener noreferrer">
-            <GhostButton label="Read Story" />
-          </a>
+          {project.link && (
+            <a href={project.link} target="_blank" rel="noopener noreferrer">
+              <GhostButton label="Read Story" />
+            </a>
+          )}
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-5 gap-3 md:gap-5">
           <div className="col-span-2 hidden sm:flex flex-col gap-3 md:gap-5">

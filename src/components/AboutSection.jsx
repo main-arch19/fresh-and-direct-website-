@@ -1,5 +1,6 @@
 import FadeIn from './ui/FadeIn';
 import AnimatedText from './ui/AnimatedText';
+import aboutVideo from '../assets/about-video.mp4';
 
 export default function AboutSection() {
   return (
@@ -30,6 +31,21 @@ export default function AboutSection() {
           className="font-medium text-left leading-relaxed self-start w-full"
           style={{ color: '#0E2A12', fontSize: 'clamp(1rem, 2vw, 1.35rem)' }}
         />
+        <FadeIn delay={0.2} y={30} className="w-full self-start">
+          <div
+            className="w-full aspect-video rounded-3xl overflow-hidden"
+            style={{ background: '#0E2A12' }}
+          >
+            <video
+              autoPlay
+              muted
+              loop
+              playsInline
+              className="w-full h-full object-cover"
+              src={aboutVideo}
+            />
+          </div>
+        </FadeIn>
       </div>
     </section>
   );

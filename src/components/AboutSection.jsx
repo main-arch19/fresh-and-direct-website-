@@ -27,7 +27,7 @@ export default function AboutSection() {
         </FadeIn>
         <AnimatedText
           text="Fresh & Direct is a Jamaican-based producer and distributor of fresh produce — Irish potatoes, onions, grape tomatoes, scallion, Scotch bonnet peppers, and imported garlic and beans. We supply traditional market vendors at Coronation and Brown's Town markets, and indirectly to retail chains like PriceSmart and hotels island-wide. What sets us apart is that we are farmers ourselves — growing Irish potatoes in St. Mary and Manchester, and onions in Spring Plain, Clarendon. We partner with farmers by providing seeds, inputs, and financial support, and collaborate with RADA to strengthen planting and post-harvest care. Our mission: sustain and grow local agriculture while meeting market demand efficiently."
-          className="font-medium text-center leading-relaxed max-w-[640px]"
+          className="font-medium text-left leading-relaxed max-w-[640px]"
           style={{ color: '#0E2A12', fontSize: 'clamp(1rem, 2vw, 1.35rem)' }}
         />
       </div>

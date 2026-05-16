@@ -91,7 +91,7 @@ export default function NavTabs() {
             role="tab"
             aria-selected={activeIndex === i}
             onClick={() => handleTabClick(i)}
-            className="relative px-4 py-1.5 rounded-full text-sm font-medium whitespace-nowrap cursor-pointer select-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-400"
+            className="relative px-5 py-2.5 rounded-full text-base font-medium whitespace-nowrap cursor-pointer select-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-400"
             style={{
               zIndex: 1,
               color: activeIndex === i ? '#ffffff' : 'rgba(255,255,255,0.62)',

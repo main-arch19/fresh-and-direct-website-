@@ -67,7 +67,7 @@ function ProjectCard({ project, index, total }) {
   const scale = useTransform(scrollYProgress, [0, 1], [1, targetScale]);
 
   return (
-    <div ref={cardRef} className="h-[85vh] flex items-start sticky" style={{ top: 0 }}>
+    <div ref={cardRef} className="min-h-[70vh] md:h-[85vh] flex items-start sticky" style={{ top: 0 }}>
       <motion.div
         style={{
           scale,
@@ -103,8 +103,8 @@ function ProjectCard({ project, index, total }) {
                 {project.name}
               </span>
               <span
-                className="font-light leading-snug mt-1 hidden md:block"
-                style={{ color: '#4B5A48', fontSize: 'clamp(0.85rem, 1vw, 1rem)' }}
+                className="font-light leading-snug mt-1"
+                style={{ color: '#4B5A48', fontSize: 'clamp(0.8rem, 1vw, 1rem)' }}
               >
                 {project.summary}
               </span>
@@ -117,7 +117,7 @@ function ProjectCard({ project, index, total }) {
           )}
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-5 gap-3 md:gap-5">
-          <div className="col-span-2 hidden sm:flex flex-col gap-3 md:gap-5">
+          <div className="col-span-2 hidden sm:flex flex-col gap-3 md:gap-5" aria-hidden="true">
             <ProjectImage
               label={`[ ${project.name} — shot 1 ]`}
               hue={project.hue}

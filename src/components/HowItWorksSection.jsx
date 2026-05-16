@@ -30,7 +30,7 @@ export default function HowItWorksSection() {
           <FadeIn
             key={s.n}
             delay={i * 0.08}
-            className="p-6 md:p-8 flex flex-col gap-4"
+            className="p-4 md:p-8 flex flex-col gap-3"
             style={{
               background: '#FFFFFF',
               borderRadius: 'clamp(28px, 3vw, 40px)',
@@ -39,7 +39,7 @@ export default function HowItWorksSection() {
           >
             <div
               className="font-black"
-              style={{ color: '#C99A2E', fontSize: 'clamp(2.5rem, 4vw, 4rem)', lineHeight: 0.9 }}
+              style={{ color: '#C99A2E', fontSize: 'clamp(1.8rem, 4vw, 4rem)', lineHeight: 0.9 }}
             >
               {s.n}
             </div>

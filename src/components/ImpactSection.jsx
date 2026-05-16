@@ -50,15 +50,15 @@ export default function ImpactSection() {
       </FadeIn>
 
       <div
-        className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-px"
+        className="max-w-6xl mx-auto grid grid-cols-2 lg:grid-cols-4 gap-px"
         style={{ background: 'rgba(14,42,18,0.14)' }}
       >
         {impactStats.map((s, i) => (
           <FadeIn
             key={s.to + s.suffix}
             delay={i * 0.08}
-            className="flex flex-col gap-4 p-6 md:p-10"
-            style={{ background: '#FFFFFF', minHeight: 220 }}
+            className="flex flex-col gap-3 p-4 md:p-10"
+            style={{ background: '#FFFFFF' }}
           >
             <div
               className="font-black"
@@ -78,25 +78,25 @@ export default function ImpactSection() {
 
       <div className="max-w-6xl mx-auto mt-24 md:mt-32 grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-6">
         <FadeIn
-          className="p-8 md:p-10 flex flex-col gap-5"
-          style={{ border: '1px solid var(--line)', borderRadius: 'clamp(28px, 3vw, 40px)' }}
+          className="p-6 md:p-10 flex flex-col gap-4"
+          style={{ border: '1px solid var(--line)', borderRadius: 'clamp(20px, 3vw, 40px)' }}
         >
-          <div className="uppercase tracking-widest font-light text-sm ml-8" style={{ color: '#C99A2E' }}>
+          <div className="uppercase tracking-widest font-light text-xs md:text-sm" style={{ color: '#C99A2E' }}>
             Jamaica Observer · Feb 2021
           </div>
-          <p className="font-medium leading-snug" style={{ color: '#0E2A12', fontSize: 'clamp(1.1rem, 1.6vw, 1.5rem)' }}>
+          <p className="font-medium leading-snug" style={{ color: '#0E2A12', fontSize: 'clamp(0.95rem, 1.6vw, 1.5rem)' }}>
             Minister of Agriculture &amp; Fisheries Floyd Green commended Fresh &amp; Direct&apos;s $50M investment, calling it a model for ensuring farmers get a solid set of returns.
           </p>
         </FadeIn>
         <FadeIn
           delay={0.1}
-          className="p-8 md:p-10 flex flex-col gap-5"
-          style={{ border: '1px solid var(--line)', borderRadius: 'clamp(28px, 3vw, 40px)' }}
+          className="p-6 md:p-10 flex flex-col gap-4"
+          style={{ border: '1px solid var(--line)', borderRadius: 'clamp(20px, 3vw, 40px)' }}
         >
-          <div className="uppercase tracking-widest font-light text-sm" style={{ color: '#C99A2E' }}>
+          <div className="uppercase tracking-widest font-light text-xs md:text-sm" style={{ color: '#C99A2E' }}>
             Jamaica Gleaner · May 2015
           </div>
-          <p className="font-medium leading-snug" style={{ color: '#0E2A12', fontSize: 'clamp(1.1rem, 1.6vw, 1.5rem)' }}>
+          <p className="font-medium leading-snug" style={{ color: '#0E2A12', fontSize: 'clamp(0.95rem, 1.6vw, 1.5rem)' }}>
             Feature on Fresh Mart Express — the online produce marketplace pioneering convenient delivery of fresh produce across Kingston, St Andrew and Portmore.
           </p>
         </FadeIn>

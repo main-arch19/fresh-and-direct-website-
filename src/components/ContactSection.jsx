@@ -24,7 +24,7 @@ export default function ContactSection() {
           Let&apos;s Talk Produce
         </FadeIn>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-10">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-10">
           <FadeIn className="flex flex-col gap-3">
             <div className="uppercase tracking-widest text-xs font-light" style={{ color: '#C99A2E' }}>Visit</div>
             <div className="font-medium leading-snug" style={{ color: '#F2EFE4', fontSize: 'clamp(1rem, 1.3vw, 1.25rem)' }}>
@@ -43,8 +43,8 @@ export default function ContactSection() {
             <div className="uppercase tracking-widest text-xs font-light mt-3" style={{ color: '#C99A2E' }}>Email</div>
             <a
               href="mailto:sherman@freshndirect.com"
-              className="font-medium leading-snug hover:underline"
-              style={{ color: '#F2EFE4', fontSize: 'clamp(1rem, 1.3vw, 1.25rem)' }}
+              className="font-medium leading-snug hover:underline break-all"
+              style={{ color: '#F2EFE4', fontSize: 'clamp(0.85rem, 1.3vw, 1.25rem)' }}
             >
               sherman@freshndirect.com
             </a>

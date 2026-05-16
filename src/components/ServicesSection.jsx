@@ -46,7 +46,7 @@ export default function ServicesSection() {
           <FadeIn
             key={s.n}
             delay={i * 0.1}
-            className="flex items-start gap-6 sm:gap-10 md:gap-14 py-8 sm:py-10 md:py-12"
+            className="flex items-start gap-4 sm:gap-10 md:gap-14 py-6 sm:py-10 md:py-12"
             style={{
               borderTop: i === 0 ? '1px solid var(--line)' : 'none',
               borderBottom: '1px solid var(--line)',
@@ -54,7 +54,7 @@ export default function ServicesSection() {
           >
             <div
               className="font-black shrink-0"
-              style={{ color: '#0E2A12', fontSize: 'clamp(3rem, 10vw, 140px)', lineHeight: 0.9 }}
+              style={{ color: '#0E2A12', fontSize: 'clamp(2rem, 10vw, 140px)', lineHeight: 0.9 }}
             >
               {s.n}
             </div>

@@ -1,5 +1,4 @@
 import FadeIn from './ui/FadeIn';
-import { ContactButton } from './ui/Buttons';
 import NavTabs from './NavTabs';
 import logoImg from '../assets/fresh-and-direct-logo.jpg';
 import heroVideo from '../assets/hero-video.mp4';
@@ -68,9 +67,6 @@ export default function HeroSection() {
             >
               Changing the way you perceive agriculture — in your homes, and in our nation.
             </p>
-          </FadeIn>
-          <FadeIn delay={0.5} y={20}>
-            <ContactButton label="Explore Our Services" />
           </FadeIn>
         </div>
       </div>

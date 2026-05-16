@@ -63,7 +63,7 @@ export default function NavTabs() {
       <div
         ref={containerRef}
         role="tablist"
-        className="relative flex items-center p-2 rounded-full"
+        className="relative flex items-center p-2 rounded-full min-w-max flex-shrink-0"
         style={{
           background: 'rgba(255,255,255,0.15)',
           backdropFilter: 'blur(12px)',

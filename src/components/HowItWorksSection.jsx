@@ -25,7 +25,7 @@ export default function HowItWorksSection() {
       >
         How It Works
       </FadeIn>
-      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 md:gap-6">
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-5 md:gap-6">
         {steps.map((s, i) => (
           <FadeIn
             key={s.n}

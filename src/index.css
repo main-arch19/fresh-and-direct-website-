@@ -27,6 +27,13 @@ body {
   overflow-x: clip;
 }
 
+@keyframes nav-streak {
+  0%   { left: -20%; opacity: 0; }
+  8%   { opacity: 1; }
+  92%  { opacity: 1; }
+  100% { left: 115%; opacity: 0; }
+}
+
 .hero-heading {
   background: linear-gradient(180deg, #FFFFFF 0%, #F2C94C 100%);
   -webkit-background-clip: text;

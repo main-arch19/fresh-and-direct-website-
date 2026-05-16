@@ -63,7 +63,7 @@ export default function NavTabs() {
       <div
         ref={containerRef}
         role="tablist"
-        className="relative flex items-center p-2 rounded-full min-w-max flex-shrink-0"
+        className="relative flex items-center p-2 rounded-full min-w-max flex-shrink-0 overflow-hidden"
         style={{
           background: 'rgba(255,255,255,0.15)',
           backdropFilter: 'blur(12px)',
@@ -71,6 +71,22 @@ export default function NavTabs() {
           boxShadow: '0 2px 16px rgba(0,0,0,0.18), inset 0 1px 0 rgba(255,255,255,0.25)',
         }}
       >
+        {/* Glowing green streak */}
+        <div
+          aria-hidden="true"
+          style={{
+            position: 'absolute',
+            top: 0,
+            bottom: 0,
+            width: '80px',
+            background: 'linear-gradient(90deg, transparent 0%, rgba(74,222,128,0.18) 20%, rgba(74,222,128,0.95) 50%, rgba(74,222,128,0.18) 80%, transparent 100%)',
+            filter: 'blur(5px)',
+            animation: 'nav-streak 2.2s linear infinite',
+            zIndex: 3,
+            pointerEvents: 'none',
+          }}
+        />
+
         {/* Animated blue pill */}
         <div
           aria-hidden="true"

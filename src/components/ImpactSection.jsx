@@ -11,11 +11,14 @@ const impactStats = [
 
 function CountUp({ to, prefix = '', suffix = '', duration = 1.5 }) {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: '0px 0px -50px 0px' });
+  const isInView = useInView(ref, { once: false, margin: '0px 0px -50px 0px' });
   const [val, setVal] = useState(0);
 
   useEffect(() => {
-    if (!isInView) return;
+    if (!isInView) {
+      setVal(0);
+      return;
+    }
     const controls = animate(0, to, {
       duration,
       ease: 'easeOut',

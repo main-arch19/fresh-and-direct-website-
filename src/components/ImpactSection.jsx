@@ -47,7 +47,7 @@ export default function ImpactSection() {
       </FadeIn>
 
       <div
-        className="max-w-6xl mx-auto grid grid-cols-2 lg:grid-cols-4 gap-px"
+        className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-px"
         style={{ background: 'rgba(14,42,18,0.14)' }}
       >
         {impactStats.map((s, i) => (

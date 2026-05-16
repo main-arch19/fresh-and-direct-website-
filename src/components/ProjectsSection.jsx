@@ -109,8 +109,8 @@ function ProjectCard({ project, index, total }) {
           </div>
           <GhostButton label="Read Story" />
         </div>
-        <div className="grid grid-cols-5 gap-3 md:gap-5">
-          <div className="col-span-2 flex flex-col gap-3 md:gap-5">
+        <div className="grid grid-cols-1 sm:grid-cols-5 gap-3 md:gap-5">
+          <div className="col-span-2 hidden sm:flex flex-col gap-3 md:gap-5">
             <ProjectImage
               label={`[ ${project.name} — shot 1 ]`}
               hue={project.hue}
@@ -124,7 +124,7 @@ function ProjectCard({ project, index, total }) {
               style={{ height: 'clamp(160px, 22vw, 340px)' }}
             />
           </div>
-          <div className="col-span-3">
+          <div className="col-span-1 sm:col-span-3">
             <ProjectImage
               label={`[ ${project.name} — hero ]`}
               hue={project.hue + 40}

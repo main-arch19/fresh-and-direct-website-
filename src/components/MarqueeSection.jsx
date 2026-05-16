@@ -46,8 +46,8 @@ function Tile({ t }) {
     <div
       className="rounded-2xl flex flex-col items-start justify-end shrink-0 overflow-hidden p-5"
       style={{
-        width: 420,
-        height: 270,
+        width: 'clamp(260px, 55vw, 420px)',
+        height: 'clamp(170px, 35vw, 270px)',
         border: '1px solid rgba(14,42,18,0.1)',
         ...bgStyle,
       }}

@@ -63,7 +63,7 @@ export default function HeroSection() {
           </FadeIn>
         </div>
 
-        <div className="flex justify-between items-end pb-7 sm:pb-8 md:pb-10 px-6 md:px-10 relative z-20 gap-6">
+        <div className="flex flex-wrap justify-between items-end pb-7 sm:pb-8 md:pb-10 px-6 md:px-10 relative z-20 gap-4 sm:gap-6">
           <FadeIn delay={0.35} y={20}>
             <p
               className="font-medium uppercase tracking-wide leading-snug max-w-[200px] sm:max-w-[280px] md:max-w-[340px]"

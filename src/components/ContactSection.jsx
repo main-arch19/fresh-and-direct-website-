@@ -1,5 +1,4 @@
 import FadeIn from './ui/FadeIn';
-import { ContactButton } from './ui/Buttons';
 
 export default function ContactSection() {
   return (
@@ -67,11 +66,6 @@ export default function ContactSection() {
           </FadeIn>
         </div>
 
-        <FadeIn className="mt-16 md:mt-20 flex justify-center">
-          <a href="mailto:sherman@freshndirect.com">
-            <ContactButton label="Email Operations" />
-          </a>
-        </FadeIn>
       </div>
 
       <footer

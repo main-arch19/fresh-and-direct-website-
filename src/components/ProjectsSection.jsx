@@ -30,6 +30,7 @@ const projects = [
     name: 'Holland Supply Partnership',
     summary: 'A 10+ year supply relationship with major Dutch growers — anchoring imported produce alongside our growing local catalog.',
     hue: 200,
+    link: 'https://www.cbi.eu/market-information/fresh-fruit-vegetables/netherlands/market-potential',
   },
 ];
 

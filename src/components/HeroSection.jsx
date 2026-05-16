@@ -1,20 +1,33 @@
 import FadeIn from './ui/FadeIn';
 import { ContactButton } from './ui/Buttons';
-import heroImg from '../assets/hero-farmer.jpeg';
 import logoImg from '../assets/fresh-and-direct-logo.jpg';
+import heroVideo from '../assets/hero-video.mp4';
 
 export default function HeroSection() {
   return (
     <section
       className="relative h-screen flex flex-col"
-      style={{
-        overflowX: 'clip',
-        backgroundImage: `linear-gradient(180deg, rgba(255,255,255,0.20) 0%, rgba(255,255,255,0.05) 35%, rgba(14,42,18,0.35) 100%), url(${heroImg})`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-      }}
+      style={{ overflowX: 'clip' }}
     >
-      <FadeIn delay={0} y={-20}>
+      {/* Video background */}
+      <video
+        autoPlay
+        muted
+        loop
+        playsInline
+        className="absolute inset-0 w-full h-full object-cover"
+        style={{ zIndex: 0 }}
+        src={heroVideo}
+      />
+      {/* Overlay gradient */}
+      <div
+        className="absolute inset-0"
+        style={{
+          background: 'linear-gradient(180deg, rgba(255,255,255,0.20) 0%, rgba(255,255,255,0.05) 35%, rgba(14,42,18,0.35) 100%)',
+          zIndex: 1,
+        }}
+      />
+      <FadeIn delay={0} y={-20} className="relative" style={{ zIndex: 10 }}>
         <nav
           className="flex justify-between items-center px-6 md:px-10 pt-6 md:pt-8 text-sm md:text-base lg:text-lg font-medium uppercase tracking-wider"
           style={{ color: '#FFFFFF', textShadow: '0 1px 6px rgba(0,0,0,0.45)' }}
@@ -37,7 +50,7 @@ export default function HeroSection() {
         </nav>
       </FadeIn>
 
-      <div className="flex-1 flex flex-col justify-end relative">
+      <div className="flex-1 flex flex-col justify-end relative" style={{ zIndex: 10 }}>
         <div className="overflow-hidden relative z-0">
           <FadeIn
             as="h1"

@@ -28,14 +28,6 @@ const projects = [
     imgs: [freshExpressShot1, freshExpressShot2, freshExpressHero],
     link: 'https://past.jamaica-gleaner.com/article/business/20150524/food-produce-market-now-available-online-fresh-mart-express',
   },
-  {
-    n: '03',
-    cat: 'International Trade',
-    name: 'Holland Supply Partnership',
-    summary: 'A 10+ year supply relationship with major Dutch growers — anchoring imported produce alongside our growing local catalog.',
-    hue: 200,
-    link: 'https://www.cbi.eu/market-information/fresh-fruit-vegetables/netherlands/market-potential',
-  },
 ];
 
 function ProjectImage({ label, hue, src, style }) {

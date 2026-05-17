@@ -81,7 +81,7 @@ export default function HeroSection() {
               style={{ height: 'clamp(48px, 10vw, 130px)', width: 'clamp(48px, 10vw, 130px)', display: 'block', objectFit: 'cover', borderRadius: '50%' }}
             />
           </a>
-          <div className="hidden md:flex mr-44 lg:mr-96">
+          <div className="hidden md:flex mr-60 lg:mr-[30rem]">
             <NavTabs />
           </div>
           {/* Hamburger button — mobile only */}

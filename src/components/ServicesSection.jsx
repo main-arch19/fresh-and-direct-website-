@@ -27,7 +27,7 @@ export default function ServicesSection() {
   return (
     <section id="services" className="px-5 sm:px-8 md:px-10 py-20 sm:py-24 md:py-32" style={{ background: '#FFFFFF' }}>
       <FadeIn
-        className="text-center uppercase tracking-[0.4em] font-light mb-6"
+        className="text-center uppercase font-light mb-6"
         y={20}
         style={{ color: '#C99A2E', fontSize: 'clamp(0.7rem, 1vw, 0.95rem)' }}
       >

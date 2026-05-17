@@ -32,7 +32,7 @@ function CountUp({ to, prefix = '', suffix = '', duration = 1.5 }) {
 
 export default function ImpactSection() {
   return (
-    <section id="impact" className="relative z-10 px-5 sm:px-8 md:px-10 py-20 sm:py-24 md:py-32" style={{ background: '#FFFFFF' }}>
+    <section id="impact" className="relative z-10 px-5 sm:px-8 md:px-10 py-14 sm:py-20 md:py-28" style={{ background: '#FFFFFF' }}>
       <FadeIn
         className="text-center uppercase tracking-[0.4em] font-light mb-6"
         y={20}
@@ -44,20 +44,20 @@ export default function ImpactSection() {
         as="h2"
         y={40}
         className="heading-dark font-black uppercase tracking-tight leading-none text-center mb-16 sm:mb-20 md:mb-24"
-        style={{ fontSize: 'clamp(2.5rem, 10vw, 140px)' }}
+        style={{ fontSize: 'clamp(1.875rem, 7.5vw, 105px)' }}
       >
         By The Numbers
       </FadeIn>
 
       <div
-        className="max-w-6xl mx-auto grid grid-cols-2 lg:grid-cols-4 gap-px"
+        className="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-px"
         style={{ background: 'rgba(14,42,18,0.14)' }}
       >
         {impactStats.map((s, i) => (
           <FadeIn
             key={s.to + s.suffix}
             delay={i * 0.08}
-            className="flex flex-col gap-3 p-4 md:p-10"
+            className="flex flex-col gap-3 p-5 sm:p-7 md:p-10"
             style={{ background: '#FFFFFF' }}
           >
             <div
@@ -76,9 +76,9 @@ export default function ImpactSection() {
         ))}
       </div>
 
-      <div className="max-w-6xl mx-auto mt-24 md:mt-32 grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-6">
+      <div className="max-w-6xl mx-auto mt-14 sm:mt-20 md:mt-28 grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-6">
         <FadeIn
-          className="p-6 md:p-10 flex flex-col gap-4"
+          className="p-5 sm:p-7 md:p-10 flex flex-col gap-4"
           style={{ border: '1px solid var(--line)', borderRadius: 'clamp(20px, 3vw, 40px)' }}
         >
           <div className="uppercase tracking-widest font-light text-xs md:text-sm" style={{ color: '#C99A2E' }}>
@@ -90,7 +90,7 @@ export default function ImpactSection() {
         </FadeIn>
         <FadeIn
           delay={0.1}
-          className="p-6 md:p-10 flex flex-col gap-4"
+          className="p-5 sm:p-7 md:p-10 flex flex-col gap-4"
           style={{ border: '1px solid var(--line)', borderRadius: 'clamp(20px, 3vw, 40px)' }}
         >
           <div className="uppercase tracking-widest font-light text-xs md:text-sm" style={{ color: '#C99A2E' }}>

@@ -47,7 +47,7 @@ export default function HeroSection() {
       {/* Mobile menu overlay */}
       {menuOpen && (
         <div
-          className="fixed inset-0 flex flex-col items-center justify-center gap-8 md:hidden"
+          className="fixed inset-0 flex flex-col items-center justify-center gap-8 lg:hidden"
           style={{ background: 'rgba(14,42,18,0.97)', zIndex: 50 }}
         >
           <button
@@ -71,7 +71,7 @@ export default function HeroSection() {
 
       <FadeIn delay={0} y={-20} className="relative" style={{ zIndex: 10 }}>
         <nav
-          className="flex justify-between items-center px-4 md:px-14 pt-5 md:pt-12 text-sm md:text-base lg:text-lg font-medium uppercase tracking-wider"
+          className="flex justify-between items-center px-4 sm:px-6 lg:px-14 pt-5 sm:pt-7 lg:pt-12 text-sm md:text-base lg:text-lg font-medium uppercase tracking-wider relative"
           style={{ color: '#FFFFFF', textShadow: '0 1px 6px rgba(0,0,0,0.45)' }}
         >
           <a href="#" className="flex items-center shrink-0">
@@ -81,12 +81,12 @@ export default function HeroSection() {
               style={{ height: 'clamp(48px, 10vw, 130px)', width: 'clamp(48px, 10vw, 130px)', display: 'block', objectFit: 'cover', borderRadius: '50%' }}
             />
           </a>
-          <div className="hidden md:flex mr-60 lg:mr-[30rem]">
+          <div className="hidden lg:flex absolute left-1/2 top-[50%] -translate-x-1/2 -translate-y-1/2">
             <NavTabs />
           </div>
           {/* Hamburger button — mobile only */}
           <button
-            className="md:hidden flex flex-col gap-1.5 p-2"
+            className="lg:hidden flex flex-col gap-1.5 p-2"
             onClick={() => setMenuOpen(true)}
             aria-label="Open menu"
           >
@@ -110,11 +110,11 @@ export default function HeroSection() {
           </FadeIn>
         </div>
 
-        <div className="flex flex-wrap justify-between items-end pb-7 sm:pb-8 md:pb-10 px-6 md:px-10 relative z-20 gap-4 sm:gap-6">
+        <div className="flex flex-wrap justify-between items-end pb-8 sm:pb-10 md:pb-14 px-5 sm:px-8 md:px-12 relative z-20 gap-4 sm:gap-6">
           <FadeIn delay={0.35} y={20}>
             <p
-              className="font-medium uppercase tracking-wide leading-snug max-w-[260px] sm:max-w-[280px] md:max-w-[340px]"
-              style={{ color: '#FFFFFF', fontSize: 'clamp(0.75rem, 1.3vw, 1.4rem)', textShadow: '0 2px 8px rgba(0,0,0,0.55)' }}
+              className="font-medium uppercase tracking-wide leading-snug max-w-[300px] sm:max-w-[380px] md:max-w-[440px]"
+              style={{ color: '#FFFFFF', fontSize: 'clamp(0.9rem, 1.8vw, 1.4rem)', textShadow: '0 2px 8px rgba(0,0,0,0.55)' }}
             >
               Changing the way you perceive agriculture — in your homes, and in our nation.
             </p>

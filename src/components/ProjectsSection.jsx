@@ -60,7 +60,7 @@ function ProjectCard({ project, index, total }) {
   const scale = useTransform(scrollYProgress, [0, 1], [1, targetScale]);
 
   return (
-    <div ref={cardRef} className="min-h-[70vh] md:h-[85vh] flex items-start sticky" style={{ top: 0 }}>
+    <div ref={cardRef} className="min-h-[80vh] md:h-[88vh] flex items-start sticky" style={{ top: 0 }}>
       <motion.div
         style={{
           scale,
@@ -110,7 +110,7 @@ function ProjectCard({ project, index, total }) {
           )}
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-5 gap-3 md:gap-5">
-          <div className="col-span-2 hidden sm:flex flex-col gap-3 md:gap-5" aria-hidden="true">
+          <div className="col-span-2 hidden md:flex flex-col gap-3 md:gap-5" aria-hidden="true">
             <ProjectImage
               label={`[ ${project.name} — shot 1 ]`}
               hue={project.hue}
@@ -140,8 +140,8 @@ function ProjectCard({ project, index, total }) {
 
 export default function ProjectsSection() {
   return (
-    <section id="projects" className="relative z-10 pb-24" style={{ background: '#FFFFFF' }}>
-      <div className="overflow-hidden pt-16 sm:pt-20 md:pt-28">
+    <section id="projects" className="relative z-10 pb-14 sm:pb-20 md:pb-28" style={{ background: '#FFFFFF' }}>
+      <div className="overflow-hidden pt-12 sm:pt-16 md:pt-24">
         <FadeIn
           className="text-center uppercase tracking-[0.4em] font-light mb-6"
           y={20}
@@ -153,7 +153,7 @@ export default function ProjectsSection() {
           as="h2"
           y={40}
           className="heading-dark font-black uppercase tracking-tight leading-none text-center"
-          style={{ fontSize: 'clamp(64px, 16vw, 16vw)' }}
+          style={{ fontSize: 'clamp(48px, 12vw, 12vw)' }}
         >
           Projects
         </FadeIn>

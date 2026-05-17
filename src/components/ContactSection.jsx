@@ -4,7 +4,7 @@ export default function ContactSection() {
   return (
     <section
       id="contact"
-      className="px-5 sm:px-8 md:px-16 pt-20 sm:pt-24 md:pt-32 pb-10"
+      className="px-5 sm:px-8 md:px-16 pt-14 sm:pt-20 md:pt-28 pb-10"
       style={{ background: '#0E2A12', color: '#F2EFE4' }}
     >
       <div className="max-w-5xl mx-auto">
@@ -30,7 +30,7 @@ export default function ContactSection() {
         <div style={{ borderTop: '1px solid rgba(242,239,228,0.15)', marginBottom: '3rem' }} />
 
         {/* Contact grid — 3 equal columns, all centered */}
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-12 text-center">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 sm:gap-10 md:gap-12 text-center">
 
           {/* Visit */}
           <FadeIn className="flex flex-col items-center gap-8">
@@ -78,11 +78,19 @@ export default function ContactSection() {
             </div>
             <div className="flex flex-col items-center gap-2">
               <div className="uppercase tracking-widest text-xs font-light" style={{ color: '#C99A2E' }}>Social</div>
-              <div className="flex flex-col gap-1 font-medium" style={{ color: '#F2EFE4', fontSize: 'clamp(0.85rem, 1.1vw, 1.05rem)' }}>
-                <a href="https://facebook.com/freshndirectjamaica" target="_blank" rel="noopener noreferrer" className="hover:underline">
+              <div className="flex flex-col gap-2 font-medium" style={{ color: '#F2EFE4', fontSize: 'clamp(0.85rem, 1.1vw, 1.05rem)' }}>
+                <a href="https://facebook.com/freshndirectjamaica" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2 hover:underline">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" style={{ flexShrink: 0 }}>
+                    <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+                  </svg>
                   facebook.com/freshndirectjamaica
                 </a>
-                <a href="https://instagram.com/freshndirectltd" target="_blank" rel="noopener noreferrer" className="hover:underline">
+                <a href="https://instagram.com/freshndirectltd" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2 hover:underline">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" style={{ flexShrink: 0 }}>
+                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                    <circle cx="12" cy="12" r="4" />
+                    <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
+                  </svg>
                   @freshndirectltd
                 </a>
               </div>
@@ -94,7 +102,7 @@ export default function ContactSection() {
 
       {/* Footer bar */}
       <footer
-        className="max-w-5xl mx-auto mt-20 md:mt-24 pt-8 flex flex-col items-center gap-3 text-center"
+        className="max-w-5xl mx-auto mt-14 sm:mt-18 md:mt-20 pt-8 pb-4 flex flex-row flex-wrap justify-center items-center gap-x-8 gap-y-3 text-center"
         style={{ borderTop: '1px solid rgba(242,239,228,0.15)' }}
       >
         <div
@@ -103,7 +111,8 @@ export default function ContactSection() {
         >
           © 2026 Fresh &amp; Direct Ltd. · All Rights Reserved
         </div>
-        <div
+
+<div
           className="uppercase tracking-widest font-light text-xs"
           style={{ color: '#F2EFE4aa' }}
         >

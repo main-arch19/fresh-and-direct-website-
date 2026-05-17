@@ -21,16 +21,16 @@ export default function HowItWorksSection() {
         as="h2"
         y={40}
         className="font-black uppercase text-center mb-16 sm:mb-20"
-        style={{ color: '#0E2A12', fontSize: 'clamp(2.5rem, 9vw, 120px)', lineHeight: 1 }}
+        style={{ color: '#0E2A12', fontSize: 'clamp(1.875rem, 6.75vw, 90px)', lineHeight: 1 }}
       >
         How It Works
       </FadeIn>
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-5 md:gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 md:gap-6">
         {steps.map((s, i) => (
           <FadeIn
             key={s.n}
             delay={i * 0.08}
-            className="p-4 md:p-8 flex flex-col gap-3"
+            className="p-5 sm:p-6 lg:p-8 flex flex-col gap-3 min-w-0 overflow-hidden"
             style={{
               background: '#FFFFFF',
               borderRadius: 'clamp(28px, 3vw, 40px)',

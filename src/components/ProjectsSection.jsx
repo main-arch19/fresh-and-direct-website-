@@ -33,7 +33,7 @@ const projects = [
 function ProjectImage({ label, hue, src, style }) {
   return (
     <div
-      className="w-full overflow-hidden flex items-end p-5 relative"
+      className="w-full overflow-hidden relative"
       style={{
         background: src ? '#000' : `radial-gradient(circle at 40% 30%, oklch(0.72 0.14 ${hue}), oklch(0.34 0.08 ${hue}) 80%)`,
         borderRadius: 'clamp(28px, 4vw, 48px)',
@@ -49,9 +49,6 @@ function ProjectImage({ label, hue, src, style }) {
           style={{ borderRadius: 'inherit' }}
         />
       )}
-      <span className="relative font-mono text-[11px] uppercase tracking-widest z-10" style={{ color: '#FFFFFFcc' }}>
-        {label}
-      </span>
     </div>
   );
 }

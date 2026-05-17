@@ -35,7 +35,7 @@ const produceTiles = [
 function Tile({ t }) {
   const bgStyle = t.img
     ? {
-        backgroundImage: `linear-gradient(to top, rgba(0,0,0,0.60) 0%, transparent 55%), url(${t.img})`,
+        backgroundImage: `url(${t.img})`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
       }
@@ -45,18 +45,14 @@ function Tile({ t }) {
 
   return (
     <div
-      className="rounded-2xl flex flex-col items-start justify-end shrink-0 overflow-hidden p-5"
+      className="rounded-2xl shrink-0 overflow-hidden"
       style={{
         width: 'clamp(260px, 55vw, 420px)',
         height: 'clamp(170px, 35vw, 270px)',
         border: '1px solid rgba(14,42,18,0.1)',
         ...bgStyle,
       }}
-    >
-      <span className="font-mono text-[11px] uppercase tracking-widest" style={{ color: '#FFFFFFcc' }}>
-        [ {t.name} ]
-      </span>
-    </div>
+    />
   );
 }
 
@@ -91,7 +87,7 @@ export default function MarqueeSection() {
   };
 
   return (
-    <section ref={sectionRef} className="pt-24 sm:pt-32 md:pt-40 pb-10" style={{ background: '#FFFFFF', overflow: 'hidden' }}>
+    <section ref={sectionRef} className="py-24 sm:py-32 md:py-44" style={{ background: '#FFFFFF', overflow: 'hidden' }}>
       <div className="flex flex-col gap-3">
         {renderRow(row1, 'right')}
         {renderRow(row2, 'left')}

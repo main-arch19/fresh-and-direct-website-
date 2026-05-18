@@ -68,7 +68,7 @@ export default function ImpactSection() {
             </div>
             <div
               className="font-light leading-snug"
-              style={{ color: '#4B5A48', fontSize: 'clamp(0.6rem, 0.9vw, 1rem)' }}
+              style={{ color: '#4B5A48', fontSize: 'clamp(0.7rem, 1.1vw, 1rem)' }}
             >
               {s.label}
             </div>
@@ -76,27 +76,27 @@ export default function ImpactSection() {
         ))}
       </div>
 
-      <div className="max-w-6xl mx-auto mt-14 sm:mt-20 md:mt-28 grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-6">
+      <div className="max-w-6xl mx-auto mt-14 sm:mt-20 md:mt-28 grid grid-cols-2 gap-3 sm:gap-5 md:gap-6">
         <FadeIn
-          className="p-5 sm:p-7 md:p-10 flex flex-col gap-4"
-          style={{ border: '1px solid var(--line)', borderRadius: 'clamp(20px, 3vw, 40px)' }}
+          className="p-3 sm:p-7 md:p-10 flex flex-col gap-3 sm:gap-4"
+          style={{ border: '1px solid var(--line)', borderRadius: 'clamp(12px, 3vw, 40px)' }}
         >
-          <div className="uppercase tracking-widest font-light text-xs md:text-sm" style={{ color: '#C99A2E' }}>
+          <div className="uppercase tracking-widest font-light text-xs" style={{ color: '#C99A2E' }}>
             Jamaica Observer · Feb 2021
           </div>
-          <p className="font-medium leading-snug" style={{ color: '#0E2A12', fontSize: 'clamp(0.95rem, 1.6vw, 1.5rem)' }}>
+          <p className="font-medium leading-snug" style={{ color: '#0E2A12', fontSize: 'clamp(0.75rem, 1.6vw, 1.5rem)' }}>
             Minister of Agriculture &amp; Fisheries Floyd Green commended Fresh &amp; Direct&apos;s $50M investment, calling it a model for ensuring farmers get a solid set of returns.
           </p>
         </FadeIn>
         <FadeIn
           delay={0.1}
-          className="p-5 sm:p-7 md:p-10 flex flex-col gap-4"
-          style={{ border: '1px solid var(--line)', borderRadius: 'clamp(20px, 3vw, 40px)' }}
+          className="p-3 sm:p-7 md:p-10 flex flex-col gap-3 sm:gap-4"
+          style={{ border: '1px solid var(--line)', borderRadius: 'clamp(12px, 3vw, 40px)' }}
         >
-          <div className="uppercase tracking-widest font-light text-xs md:text-sm" style={{ color: '#C99A2E' }}>
+          <div className="uppercase tracking-widest font-light text-xs" style={{ color: '#C99A2E' }}>
             Jamaica Gleaner · May 2015
           </div>
-          <p className="font-medium leading-snug" style={{ color: '#0E2A12', fontSize: 'clamp(0.95rem, 1.6vw, 1.5rem)' }}>
+          <p className="font-medium leading-snug" style={{ color: '#0E2A12', fontSize: 'clamp(0.75rem, 1.6vw, 1.5rem)' }}>
             Feature on Fresh Mart Express — the online produce marketplace pioneering convenient delivery of fresh produce across Kingston, St Andrew and Portmore.
           </p>
         </FadeIn>

@@ -115,9 +115,7 @@ export default function ContactSection() {
       />
 
       {/* Footer bar */}
-      <footer
-        className="pt-8 pb-4 flex flex-row flex-wrap justify-center items-center gap-x-8 gap-y-3 text-center"
-      >
+      <footer className="px-5 sm:px-8 md:px-16 pt-8 pb-4 flex flex-col sm:flex-row justify-center items-center gap-3 sm:gap-8 text-center">
         <div
           className="uppercase tracking-widest font-light text-xs"
           style={{ color: '#F2EFE4aa' }}

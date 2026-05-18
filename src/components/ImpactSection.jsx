@@ -50,25 +50,25 @@ export default function ImpactSection() {
       </FadeIn>
 
       <div
-        className="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-px"
+        className="max-w-6xl mx-auto grid grid-cols-4 gap-px"
         style={{ background: 'rgba(14,42,18,0.14)' }}
       >
         {impactStats.map((s, i) => (
           <FadeIn
             key={s.to + s.suffix}
             delay={i * 0.08}
-            className="flex flex-col gap-3 p-5 sm:p-7 md:p-10"
+            className="flex flex-col gap-1 sm:gap-2 md:gap-3 p-3 sm:p-5 md:p-7 lg:p-10"
             style={{ background: '#FFFFFF' }}
           >
             <div
               className="font-black"
-              style={{ color: '#0E2A12', fontSize: 'clamp(2.5rem, 5vw, 5rem)', lineHeight: 0.9 }}
+              style={{ color: '#0E2A12', fontSize: 'clamp(1.4rem, 4.5vw, 5rem)', lineHeight: 0.9 }}
             >
               <CountUp prefix={s.prefix} to={s.to} suffix={s.suffix} />
             </div>
             <div
               className="font-light leading-snug"
-              style={{ color: '#4B5A48', fontSize: 'clamp(0.85rem, 1vw, 1rem)' }}
+              style={{ color: '#4B5A48', fontSize: 'clamp(0.6rem, 0.9vw, 1rem)' }}
             >
               {s.label}
             </div>

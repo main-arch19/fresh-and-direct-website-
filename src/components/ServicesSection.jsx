@@ -25,9 +25,9 @@ const services = [
 
 export default function ServicesSection() {
   return (
-    <section id="services" className="px-5 sm:px-8 md:px-10 pt-14 sm:pt-20 md:pt-28 pb-20 sm:pb-24 md:pb-32" style={{ background: '#FFFFFF' }}>
+    <section id="services" className="pt-14 sm:pt-20 md:pt-28 pb-20 sm:pb-24 md:pb-32" style={{ background: '#FFFFFF' }}>
       <FadeIn
-        className="text-center uppercase font-light mb-6"
+        className="text-center uppercase font-light mb-6 px-5 sm:px-8 md:px-10"
         y={20}
         style={{ color: '#C99A2E', fontSize: 'clamp(0.7rem, 1vw, 0.95rem)' }}
       >
@@ -36,40 +36,41 @@ export default function ServicesSection() {
       <FadeIn
         as="h2"
         y={40}
-        className="font-black uppercase text-center mb-10 sm:mb-16 md:mb-24"
+        className="font-black uppercase text-center mb-10 sm:mb-16 md:mb-24 px-5 sm:px-8 md:px-10"
         style={{ color: '#0E2A12', fontSize: 'clamp(2.25rem, 9vw, 120px)', lineHeight: 1 }}
       >
         Services
       </FadeIn>
-      <div className="max-w-5xl mx-auto">
+      <div>
         {services.map((s, i) => (
           <FadeIn
             key={s.n}
             delay={i * 0.1}
-            className="flex items-start gap-4 sm:gap-10 md:gap-14 py-5 sm:py-8 md:py-10"
             style={{
               borderTop: i === 0 ? '1px solid var(--line)' : 'none',
               borderBottom: '1px solid var(--line)',
             }}
           >
-            <div
-              className="font-black shrink-0"
-              style={{ color: '#0E2A12', fontSize: 'clamp(1.4rem, 6vw, 80px)', lineHeight: 0.9 }}
-            >
-              {s.n}
-            </div>
-            <div className="flex flex-col gap-3 sm:gap-4 md:gap-6 pt-2">
+            <div className="max-w-5xl mx-auto flex items-start gap-4 sm:gap-10 md:gap-14 py-5 sm:py-8 md:py-10 px-5 sm:px-8 md:px-10">
               <div
-                className="font-medium uppercase"
-                style={{ color: '#0E2A12', fontSize: 'clamp(1rem, 2.2vw, 2.1rem)', lineHeight: 1.05 }}
+                className="font-black shrink-0"
+                style={{ color: '#0E2A12', fontSize: 'clamp(1.4rem, 6vw, 80px)', lineHeight: 0.9 }}
               >
-                {s.name}
+                {s.n}
               </div>
-              <div
-                className="font-light leading-relaxed max-w-2xl"
-                style={{ color: '#4B5A48', fontSize: 'clamp(0.85rem, 1.6vw, 1.25rem)' }}
-              >
-                {s.desc}
+              <div className="flex flex-col gap-3 sm:gap-4 md:gap-6 pt-2">
+                <div
+                  className="font-medium uppercase"
+                  style={{ color: '#0E2A12', fontSize: 'clamp(1rem, 2.2vw, 2.1rem)', lineHeight: 1.05 }}
+                >
+                  {s.name}
+                </div>
+                <div
+                  className="font-light leading-relaxed max-w-2xl"
+                  style={{ color: '#4B5A48', fontSize: 'clamp(0.85rem, 1.6vw, 1.25rem)' }}
+                >
+                  {s.desc}
+                </div>
               </div>
             </div>
           </FadeIn>

@@ -30,7 +30,7 @@ export default function HowItWorksSection() {
           <FadeIn
             key={s.n}
             delay={i * 0.08}
-            className="p-5 sm:p-6 lg:p-8 flex flex-col gap-3 min-w-0 overflow-hidden"
+            className="p-8 sm:p-10 lg:p-14 flex flex-col gap-3 min-w-0 overflow-hidden"
             style={{
               background: '#FFFFFF',
               borderRadius: 'clamp(28px, 3vw, 40px)',

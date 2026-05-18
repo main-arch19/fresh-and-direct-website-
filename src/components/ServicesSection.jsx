@@ -25,7 +25,7 @@ const services = [
 
 export default function ServicesSection() {
   return (
-    <section id="services" className="px-5 sm:px-8 md:px-10 py-14 sm:py-20 md:py-28" style={{ background: '#FFFFFF' }}>
+    <section id="services" className="px-5 sm:px-8 md:px-10 pt-14 sm:pt-20 md:pt-28 pb-20 sm:pb-24 md:pb-32" style={{ background: '#FFFFFF' }}>
       <FadeIn
         className="text-center uppercase font-light mb-6"
         y={20}

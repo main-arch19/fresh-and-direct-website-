@@ -6,12 +6,12 @@ export default function AboutSection() {
   return (
     <section
       id="about"
-      className="relative min-h-screen px-5 sm:px-8 md:px-10 py-14 sm:py-20 md:py-28 flex flex-col items-center justify-center gap-10 sm:gap-14 md:gap-16"
+      className="relative min-h-screen px-5 sm:px-8 md:px-10 pt-12 sm:pt-16 md:pt-28 pb-14 sm:pb-20 md:pb-28 flex flex-col items-center justify-center gap-10 sm:gap-14 md:gap-16"
       style={{ background: '#FFFFFF' }}
     >
       <div className="flex flex-col items-center gap-8 sm:gap-10 md:gap-14 relative z-10">
         <FadeIn
-          className="text-center uppercase tracking-[0.4em] font-light"
+          className="text-center uppercase tracking-[0.4em] font-light mb-10 sm:mb-16 md:mb-24"
           delay={0} y={20}
           style={{ color: '#C99A2E', fontSize: 'clamp(0.7rem, 1vw, 0.95rem)' }}
         >
@@ -21,7 +21,7 @@ export default function AboutSection() {
           as="h2"
           delay={0.05}
           y={40}
-          className="heading-dark font-black uppercase leading-none tracking-tight text-center mt-4 sm:mt-8 md:mt-12"
+          className="heading-dark font-black uppercase leading-none tracking-tight text-center"
           style={{ fontSize: 'clamp(2.25rem, 9vw, 120px)' }}
         >
           Since 2005

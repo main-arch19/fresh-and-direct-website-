@@ -36,7 +36,7 @@ export default function NavTabs() {
                 aria-hidden="true"
                 style={{
                   width: '1px',
-                  height: '1.4em',
+                  height: '0.7em',
                   background: 'rgba(0,0,0,0.25)',
                   flexShrink: 0,
                 }}
@@ -47,7 +47,7 @@ export default function NavTabs() {
               role="tab"
               aria-selected={activeIndex === i}
               onClick={() => handleTabClick(i)}
-              className="nav-tab-btn relative px-8 rounded-full text-2xl font-medium whitespace-nowrap cursor-pointer select-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-orange-400"
+              className="nav-tab-btn relative px-4 rounded-full text-base font-medium whitespace-nowrap cursor-pointer select-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-orange-400"
               style={{
                 color: '#111111',
                 background: 'none',

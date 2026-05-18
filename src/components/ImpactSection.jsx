@@ -34,7 +34,7 @@ export default function ImpactSection() {
   return (
     <section id="impact" className="relative z-10 px-5 sm:px-8 md:px-10 py-14 sm:py-20 md:py-28" style={{ background: '#FFFFFF' }}>
       <FadeIn
-        className="text-center uppercase tracking-[0.4em] font-light mb-6"
+        className="text-center uppercase tracking-[0.4em] font-light mb-8 sm:mb-10 md:mb-12"
         y={20}
         style={{ color: '#C99A2E', fontSize: 'clamp(0.7rem, 1vw, 0.95rem)' }}
       >
@@ -43,7 +43,7 @@ export default function ImpactSection() {
       <FadeIn
         as="h2"
         y={40}
-        className="heading-dark font-black uppercase tracking-tight leading-none text-center mb-16 sm:mb-20 md:mb-24"
+        className="heading-dark font-black uppercase tracking-tight leading-none text-center mb-14 sm:mb-20 md:mb-28"
         style={{ fontSize: 'clamp(1.875rem, 7.5vw, 105px)' }}
       >
         By The Numbers
